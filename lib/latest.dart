@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:newsapp/news_detail.dart';
 
 class Latest extends StatelessWidget {
   @override
@@ -168,7 +169,7 @@ class Latest extends StatelessWidget {
                                     height: 35,
                                     width: 35,
                                     fit: BoxFit.cover,
-                                    image: AssetImage('assets/images/cewek1.png'),
+                                    image: AssetImage('assets/images/cewek3.jpeg'),
                                   ),
                                 ),
                                 Column(
@@ -258,9 +259,17 @@ class CardStack extends StatelessWidget {
           height: 220,
           child: ClipRRect(
             borderRadius: BorderRadius.circular(5),
-            child: Container(
-              child: Image(
-                image: AssetImage('assets/images/rumah1.jpg'),
+            child: GestureDetector(
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => NewsDetail()));
+              },
+              child: Container(
+                child: Hero(
+                  tag: 'gambar',
+                  child: Image(
+                    image: AssetImage('assets/images/rumah1.jpg'),
+                  ),
+                ),
               ),
             )
           ),
