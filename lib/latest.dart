@@ -7,7 +7,7 @@ class Latest extends StatelessWidget {
     return Scaffold(
       body: Container(
         margin: EdgeInsets.all(18.0),
-        child: Column(
+        child: ListView(
           children: <Widget>[
             CardStack(),
             Container(
@@ -24,7 +24,7 @@ class Latest extends StatelessWidget {
             ),
             Container(
               margin: EdgeInsets.only(top: 16),
-              height: 110,
+              height: 130,
               decoration: BoxDecoration(
               boxShadow: [
                 BoxShadow(
@@ -33,8 +33,8 @@ class Latest extends StatelessWidget {
                 ]
               ),
               width: MediaQuery.of(context).size.width,
-              child: Card(
-                elevation: 0,
+              child: Container(
+                color: Colors.white,
                 child: Row(
                   children: <Widget>[
                     Expanded(
@@ -49,7 +49,7 @@ class Latest extends StatelessWidget {
                     Expanded(
                       flex: 5,
                       child: Container(
-                        margin: EdgeInsets.only(top: 12, left: 12),
+                        margin: EdgeInsets.only(top: 14, left: 12),
                         child: Column(
                           children: <Widget>[
                             Row(
@@ -71,7 +71,7 @@ class Latest extends StatelessWidget {
                                         'by Lynne William',
                                         style: TextStyle(
                                           fontFamily: 'Nunito Sans',
-                                          fontSize: 12.0,
+                                          fontSize: 13.0,
                                           fontWeight: FontWeight.w700
                                         ),
                                       ),
@@ -81,7 +81,7 @@ class Latest extends StatelessWidget {
                                         'January 23, 2019',
                                         style: TextStyle(
                                           fontFamily: 'Nunito Sans',
-                                          fontSize: 11.0,
+                                          fontSize: 12.0,
                                           fontWeight: FontWeight.w300
                                         ),
                                       ),
@@ -120,14 +120,121 @@ class Latest extends StatelessWidget {
                     Expanded(
                       flex: 1,
                       child: Container(
-                        padding: EdgeInsets.only(top: 12, right: 12),
+                        padding: EdgeInsets.only(top: 20, right: 20),
                         alignment: Alignment.topRight,
                         child: SvgPicture.asset('assets/images/like.svg'),
                       ),
                     ),
                   ],
-                )
+                ),
+              )
+            ),
+            Container(
+              margin: EdgeInsets.only(top: 16),
+              height: 130,
+              decoration: BoxDecoration(
+              boxShadow: [
+                BoxShadow(
+                  color: Color.fromRGBO(0, 0, 0, 0.05),
+                  blurRadius: 20.0),
+                ]
               ),
+              width: MediaQuery.of(context).size.width,
+              child: Container(
+                color: Colors.white,
+                child: Row(
+                  children: <Widget>[
+                    Expanded(
+                      flex: 2,
+                      child: Container(
+                        child: Image(
+                          fit: BoxFit.fitHeight,
+                          image: AssetImage('assets/images/eskrim.jpg'),
+                        ),
+                      ),
+                    ),
+                    Expanded(
+                      flex: 5,
+                      child: Container(
+                        margin: EdgeInsets.only(top: 14, left: 12),
+                        child: Column(
+                          children: <Widget>[
+                            Row(
+                              children: <Widget>[
+                                ClipRRect(
+                                  borderRadius: BorderRadius.circular(100),
+                                    child: Image(
+                                    height: 35,
+                                    width: 35,
+                                    fit: BoxFit.cover,
+                                    image: AssetImage('assets/images/cewek1.png'),
+                                  ),
+                                ),
+                                Column(
+                                  children: <Widget>[
+                                    Container(
+                                      padding: EdgeInsets.only(left: 8.0),
+                                      child: Text(
+                                        'by Seren Shanee',
+                                        style: TextStyle(
+                                          fontFamily: 'Nunito Sans',
+                                          fontSize: 13.0,
+                                          fontWeight: FontWeight.w700
+                                        ),
+                                      ),
+                                    ),
+                                    Container(
+                                      child: Text(
+                                        'January 23, 2019',
+                                        style: TextStyle(
+                                          fontFamily: 'Nunito Sans',
+                                          fontSize: 12.0,
+                                          fontWeight: FontWeight.w300
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                )
+                              ],
+                            ),
+                            Container(
+                              alignment: Alignment.topLeft,
+                              padding: EdgeInsets.only(top: 8.0),
+                              child: Text(
+                                'Ice Cream to Happy day',
+                                style: TextStyle(
+                                  fontFamily: 'Nunito Sans',
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 16.0
+                                ),
+                              )
+                            ),
+                            Container(
+                              alignment: Alignment.topLeft,
+                              padding: EdgeInsets.only(top: 6.0),
+                              child: Text(
+                                'Lorem ipsum dolor sit amet, consectetur...',
+                                style: TextStyle(
+                                  fontFamily: 'Nunito Sans',
+                                  fontSize: 12.0
+                                ),
+                              ),
+                            ),
+                          ],
+                        )
+                      ),
+                    ),
+                    Expanded(
+                      flex: 1,
+                      child: Container(
+                        padding: EdgeInsets.only(top: 20, right: 20),
+                        alignment: Alignment.topRight,
+                        child: SvgPicture.asset('assets/images/like_outline.svg'),
+                      ),
+                    ),
+                  ],
+                ),
+              )
             )
           ],
         ),
