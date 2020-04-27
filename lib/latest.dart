@@ -23,7 +23,7 @@ class Latest extends StatelessWidget {
               )
             ),
             Container(
-              margin: EdgeInsets.only(top: 16),
+              margin: EdgeInsets.only(top: 16, bottom: 16),
               height: 130,
               decoration: BoxDecoration(
               boxShadow: [
@@ -130,7 +130,7 @@ class Latest extends StatelessWidget {
               )
             ),
             Container(
-              margin: EdgeInsets.only(top: 16),
+              margin: EdgeInsets.only(bottom: 16),
               height: 130,
               decoration: BoxDecoration(
               boxShadow: [
@@ -148,7 +148,8 @@ class Latest extends StatelessWidget {
                       flex: 2,
                       child: Container(
                         child: Image(
-                          fit: BoxFit.fitHeight,
+                          height: 100,
+                          fit: BoxFit.fill,
                           image: AssetImage('assets/images/eskrim.jpg'),
                         ),
                       ),
